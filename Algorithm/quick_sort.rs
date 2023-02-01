@@ -14,10 +14,10 @@ fn main() {
 
 fn partition(a: &mut [usize; LEN], l: usize, r:usize) -> usize {
     let mid: usize = a[r];
-    let mut i: usize = l; 
+    let mut i: usize = l; // i <= j
     let mut j: usize = l;
     while j < r {
-        if a[i] <= mid
+        if a[j] <= mid
         {
             let tmp = a[i];
             a[i] = a[j];
