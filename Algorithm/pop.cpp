@@ -40,31 +40,31 @@ void clear_one(vector<vector<int>> &data, int i, int j)
     {
         clear_one(data, i-1, j);
     }
-    else if(i+1 < rs)
+    if(i+1 < rs)
     {
         clear_one(data, i+1, j);
     }
-    else if(j-1 >= 0)
+    if(j-1 >= 0)
     {
         clear_one(data, i, j-1);
     }
-    else if(j+1 < cs)
+    if(j+1 < cs)
     {
         clear_one(data, i, j+1);
     }
-    else if(i-1 >= 0 && j-1 >= 0)
+    if(i-1 >= 0 && j-1 >= 0)
     {
         clear_one(data, i-1, j-1);
     }
-    else if(i-1 >= 0 && j+1 < cs)
+    if(i-1 >= 0 && j+1 < cs)
     {
         clear_one(data, i-1, j+1);
     }
-    else if(i+1 < rs && j-1 >= 0)
+    if(i+1 < rs && j-1 >= 0)
     {
         clear_one(data, i+1, j-1);
     }
-    else if(i+1 < rs && j+1 < cs)
+    if(i+1 < rs && j+1 < cs)
     {
         clear_one(data, i+1, j+1);
     }
@@ -96,7 +96,7 @@ int pop(vector<vector<int>> &data)
                 clear_one(new_data, i, j);
                 cnt = 1 + pop(new_data);
                 flag = true;
-                
+
                 if(cnt < min)
                 {
                     min = cnt;
