@@ -28,11 +28,11 @@ int get_min_of_rotated_array(vector<int> &data)
         }
 
         mid = p1 + (p2-p1)/2;
-        if(data[p1] > data[mid])
+        if(data[mid] >= data[p1])
         {
             p1 = mid;
         }
-        else
+        else if(data[mid] <= data[p2])
         {
             p2 = mid;
         }
