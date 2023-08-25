@@ -14,13 +14,13 @@ void print_one_to_max(int n)
 
 void helper(string &number, int index)
 {
-    if(index >= number.size())
+    if(index > number.size())
     {
         return;
     }
 
     //最后一位赋值才打印；全0和前导0需要格式化。
-    if(index == number.size() - 1)
+    if(index == number.size())
     {
         cout << number <<endl;
         return;
